@@ -1,0 +1,426 @@
+﻿@* @model List<ResultStatisticsDto>
+ *@
+ @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- 1.st  -->
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Aktif Araçlar</span>
+                            <h5 class="card-title mb-0 text-white">Toplam Araç Sayısı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    @ViewBag.v1
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v11 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v11%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Mevcut Lokasyonlar</span>
+                            <h5 class="card-title mb-0 text-white">  Lokasyon Sayısı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v2
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v22 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v22%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Aktif Yazar Sayısı</span>
+                            <h5 class="card-title mb-0 text-white">Aktif Yazarlar</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v3
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v33 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v33%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Tüm Zamanlar</span>
+                            <h5 class="card-title mb-0 text-white">Toplam Blog Sayısı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v4
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v44 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v44%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+
+        <!-- 2.nd  -->
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Aktif Markalar</span>
+                            <h5 class="card-title mb-0 text-white">Toplam Marka Sayısı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    # @ViewBag.v5
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v55 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v55%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Günlük Fiyat</span>
+                            <h5 class="card-title mb-0 text-white">Ortalama Araç Fiyatı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v6 ₺
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v66 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v66%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Haftalık Fiyat</span>
+                            <h5 class="card-title mb-0 text-white">Ortalama Araç Fiyatı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v7 ₺
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v77 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v77%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Aylık Fiyat</span>
+                            <h5 class="card-title mb-0 text-white">Ortalama Araç Fiyatı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v8 ₺
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v88 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v88%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+
+        <!-- 3.rd  -->
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Otomatik Vites Araçlar</span>
+                            <h5 class="card-title mb-0 text-white">Araç Sayısı</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    # @ViewBag.v9
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v99 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v99%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">  <!--En son bakılacak-->
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Marka Adı</span>
+                            <h5 class="card-title mb-0 text-white">En Çok Araca Sahip Marka</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v10
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v100 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v10%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+             
+            <div class="col-md-6 col-xl-3">
+                <!--En son bakılacak-->
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">En Fazla Yorum Alan Blog </span>
+                            <h5 class="card-title mb-0 text-white">En İyi Blog</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v116
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v106 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v106%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">1000 Km den Düşük</span>
+                            <h5 class="card-title mb-0 text-white">Daily </h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v111
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v101 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v101%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+
+        <!-- 4.th  -->
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Yakıt Türü</span>
+                            <h5 class="card-title mb-0 text-white">Benzin & Dizel</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    # @ViewBag.v112
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v102 % <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v102%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Yakıt Türü</span>
+                            <h5 class="card-title mb-0 text-white">Elektrik</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v113
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v103 % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v103%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Günlük Kiralama Fiyatı</span>
+                            <h5 class="card-title mb-0 text-white">En Pahalı Araç</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v114
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v104 <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.v104%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Günlük Kiralama Fiyatı</span>
+                            <h5 class="card-title mb-0 text-white">En Ucuz Araç</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center text-white mb-0">
+                                    # @ViewBag.v115
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.v105 <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v105%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+    </div> <!-- container-fluid -->
+</div>
+

@@ -1,0 +1,34 @@
+﻿@model UpdatePricingDto
+@{
+    ViewData["Title"] = "UpdatePricing";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ödeme Periyod Bilgisi Güncelle</h4>
+                        <form method="post" asp-action="UpdatePricing">
+                            <input type="hidden" asp-for="PricingID" />
+
+
+                            <div class="form-group">
+                                <label for="exampleInputName">Ödeme Türü Adı</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Ödeme Türü Ad Girişi Yapınız..">
+                            </div>
+                            
+
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Ödeme Türünü Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end card-body-->
+        </div>
+
+    </div> <!-- container-fluid -->
+</div>
+

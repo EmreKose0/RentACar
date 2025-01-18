@@ -1,0 +1,66 @@
+﻿@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">AnaSayfa About Alanı</h4>
+                        <p class="card-subtitle mb-4">
+                            Hakkımda da Bulunan Bilgiliri Düzenleyebilirsiniz, Sadece 1 Adet Hakkımda Verisi Bulunmalı...
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Başlık</th>
+                                        <th>Açıklama</th>
+                                        <th>Görsel</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                 
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Title</td>
+                                            <td>@item.Description</td>
+                                            <td>@item.ImageUrl</td>
+                                            <td><a href="/Admin/AdminAbout/RemoveAbout/@item.AboutId" class="btn btn-outline-danger"> Sil </a></td>
+                                            <td><a href="/Admin/AdminAbout/UpdateAbout/@item.AboutId" class="btn btn-outline-success"> Güncelle </a></td>
+
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                            <a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary"> Yeni Hakkımda Girişi </a>
+                        </div>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+
+        </div>
+
+
+    </div> <!-- container-fluid -->
+</div>
+

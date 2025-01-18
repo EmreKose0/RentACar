@@ -1,0 +1,44 @@
+﻿@model CreateFooterAddressDto
+
+@{
+    ViewData["Title"] = "CreateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Adres Bilgisi Girişi</h4>
+                        <form method="post" asp-action="CreateFooterAddress">
+
+                            <div class="form-group">
+                                <label for="exampleInputAddress">Adres</label>
+                                <input type="text" class="form-control" id="exampleInputAddress" asp-for="Address" placeholder="Adres Bilgisi Girişi Yapınız..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDesc">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputDesc" asp-for="Description" placeholder="Açıklama Girişi Yapınız..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPhone">Telefon Numarası</label>
+                                <input type="text" class="form-control" id="exampleInputPhone" asp-for="Phone" placeholder="Tel No Bilgisi Giriniz..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputMail">E-Mail</label>
+                                <input type="text" class="form-control" id="exampleInputMail" asp-for="Email" placeholder="Email Bilgisi Giriniz..">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Adresi  Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end card-body-->
+        </div>
+
+    </div> <!-- container-fluid -->
+</div>

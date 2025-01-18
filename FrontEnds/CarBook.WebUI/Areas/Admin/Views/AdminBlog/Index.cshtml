@@ -1,0 +1,67 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog Alanı</h4>
+                        <p class="card-subtitle mb-4">
+                            Anasayfanın Blog Alanında Bulunan Bilgiliri Düzenleyebilirsiniz, Sadece 1 Adet Blog Bulunmalı...
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Başlık</th>
+                                        <th>Yazar</th>
+                                        <th>Kategori</th>
+                                        <th>Tarih</th>
+                                        <th>Sil</th>
+                                        <th>Blogu Aç</th>
+                                        <th>Yorumlar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Title</td>
+                                            <td>@item.AuthorName</td>
+                                            <td>@item.CategoryID</td>
+                                            <td>@item.CreatedDate.ToShortDateString()</td>
+                                            <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogID" class="btn btn-outline-danger"> Sil </a></td>
+                                            <td><a href="/Blog/BlogDetail/@item.BlogID/@item.BlogID" class="btn btn-outline-dark"> Blogu Aç </a></td>
+                                            <td><a href="/Admin/AdminComment/Index/@item.BlogID" class="btn btn-outline-warning"> Yorumlar </a></td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+@*                             <a href="/Admin/AdminBlog/CreateBlog/" class="btn btn-outline-primary"> Yeni Blog Girişi </a>
+ *@                        </div>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+
+        </div>
+
+
+    </div> <!-- container-fluid -->
+</div>
+

@@ -1,0 +1,15 @@
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.deps.json
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.dll
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.pdb
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Domain.dll
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Domain.pdb
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.csproj.AssemblyReference.cache
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.AssemblyInfoInputs.cache
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.AssemblyInfo.cs
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.csproj.CoreCompileInputs.cache
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook..F1F8929D.Up2Date
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.dll
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\refint\CarBook.Application.dll
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.pdb
+C:\Users\emrek\CarBook\CarBook\Core\CarBook.Application\obj\Debug\net8.0\ref\CarBook.Application.dll
